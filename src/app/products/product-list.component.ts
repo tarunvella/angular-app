@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
 
 export class ProductListComponent {
     productListTitle: string = 'Product List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
     products: any[] = [
         {
             "productId": 1,
@@ -16,17 +18,17 @@ export class ProductListComponent {
             "description": "Leaf rake with 48-inch wooden handle.",
             "price": 19.95,
             "starRating": 3.2,
-            "imageUrl": "https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+            "imageUrl": "./assets/images/Leaf-Rake.png"
           },
           {
             "productId": 2,
             "productName": "Garden Cart",
-            "productCode": "GDN-0023",
+            "productCode" : "GDN-0023",
             "releaseDate": "March 18, 2016",
             "description": "15 gallon capacity rolling garden cart",
             "price": 32.99,
             "starRating": 4.2,
-            "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+            "imageUrl": "./assets/images/garden-cart.png"
           },
     ];
 }
