@@ -44,7 +44,8 @@
                         <td>{{product.productName}}</td>
                         <td>{{product.productCode | lowercase}}</td>
                         <td>{{product.releaseDate}}</td>
-                        <td>{{product.price | currency:'INR':'₹':'1.2-2'}}</td>
+                        <!-- <td>{{product.price | (onload)='getCurrencySymbol'}}</td> -->
+                        <td>{{getCurrency('INR','narrow')}} {{product.price}}</td>
                         <td>{{product.starRating}}</td>
                     </tr>
                 </tbody>

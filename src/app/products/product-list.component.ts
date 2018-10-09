@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-
+import { getCurrencySymbol } from '@angular/common';
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html'
@@ -10,7 +10,7 @@ export class ProductListComponent {
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
-    listFilter : string ='cart';
+    listFilter: string = 'cart';
     products: any[] = [
         {
             "productId": 1,
@@ -21,19 +21,22 @@ export class ProductListComponent {
             "price": 19.95,
             "starRating": 3.2,
             "imageUrl": "./assets/images/Leaf-Rake.png"
-          },
-          {
+        },
+        {
             "productId": 2,
             "productName": "Garden Cart",
-            "productCode" : "GDN-0023",
+            "productCode": "GDN-0023",
             "releaseDate": "March 18, 2016",
             "description": "15 gallon capacity rolling garden cart",
             "price": 32.99,
             "starRating": 4.2,
             "imageUrl": "./assets/images/garden-cart.png"
-          },
+        },
     ];
     toggleImage(): void {
         this.showImage = !this.showImage;
+    }
+    getCurrency(code, format): string{
+        return getCurrencySymbol(code,format);
     }
 }
