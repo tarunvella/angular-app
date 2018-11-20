@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { getCurrencySymbol } from '@angular/common';
+import { IProduct } from "./products";
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html'
@@ -11,7 +12,7 @@ export class ProductListComponent {
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string = 'cart';
-    products: any[] = [
+    products: IProduct[] = [
         {
             "productId": 1,
             "productName": "Leaf Rake",
